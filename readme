@@ -1,0 +1,6 @@
+A child friendly site for pretend play as a cafe server. 
+This cafe menu will build an order and calculate a total for our little server.
+
+html/CSS : LARGE buttons for easy reading and selection
+JavaScript: creates a class per menuItem. event listeners detects buttons clicked in order to build an order.
+            menu items are saved into an array which is them printed/listed onto the html site.
