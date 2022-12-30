@@ -25,7 +25,6 @@ document.getElementById("ItemsDiv").addEventListener("click",function(e) {
     //alert("button element clicked!");
     let value = e.target.value;
     createListItem(value);
-
 	}
 });
 
@@ -33,33 +32,34 @@ document.getElementById("ItemsDiv").addEventListener("click",function(e) {
 
 let selectedItemsList = []
 
-
+//change alerts to mod screens/or animate to show off item
 function createListItem(value){
     if (value == '1'){
         let cakeItem = new MenuItem('Cake', 3);
         selectedItemsList.push(cakeItem);
-        printlist();
+        //printlist();
         alert("Added cake to the order!")
     }
     else if (value == '2'){
         let coffeeItem = new MenuItem('Coffee', 5);
         selectedItemsList.push(coffeeItem);
-        printlist();
+        //printlist();
         alert("Added coffee to the order!")
     }
     else if (value == '3'){
         let teaItem = new MenuItem('Tea', 3);
         selectedItemsList.push(teaItem);
-        printlist();
+        //printlist();
         alert("Added Tea to the order!")
     }
     else if (value == '4'){
         let strawberryItem = new MenuItem('Strawberry', 2);
         selectedItemsList.push(strawberryItem);
-        printlist();
+        //printlist();
         alert("Added strawberry to the order!")
     }
-
+    countItems();
+    printlist();
 }
 
 
@@ -76,8 +76,48 @@ function printlist(){
 
 
 // create a new function to detect duplicates in the array, then count the duplicates
-// 
+document.getElementById("calculate").addEventListener("click", calcTotal);
+
+//spits out example: Tea: 2, or there are two teas
+function countItems(){
+    let count = {};
+    for (let index = 0; index < selectedItemsList.length; index++) {
+        const element = selectedItemsList[index].name;
+      
+        if (count[element]) {
+          count[element] += 1;
+        } else {
+          count[element] = 1;
+          
+        }
+      }
+    console.log(count);
+}
+
 // calculate total of duplicates for price in seperate function
+//TOTAL BUTTON links to this function first; 
+//figures out duplicates, spit out amount of each price item
+//example: $2: 1, or one $2 item
+function calcTotal(){
+    let itemPriceTotals = {};
+
+    for (let index = 0; index < selectedItemsList.length; index++) {
+        let itemPriceNum = selectedItemsList[index].price;
+        let totalAmount = itemPriceTotals * itemPriceNum;
+        if (itemPriceTotals[itemPriceNum]) {
+            itemPriceTotals[itemPriceNum] += 1;
+
+        } else {
+            itemPriceTotals[itemPriceNum] = 1;
+          
+        }
+        console.log(itemPriceTotals);
+        console.log(totalAmount);
+      }
+}
+//TO:DO for error NaN from the item price totals, make a
+//for each function and cast as an int on order for the multiplication to work
+
 
 //function to delete an item from the list
 
