@@ -1,14 +1,39 @@
 :root {
-   --font-color: rgb(255, 208, 239);
+   --font-color: rgb(255, 125, 212);
    --bg-color: #fff170;
    --bg-color-two: #fff9d9;
+   --bg-color-three: #e67cf0;
    --hover-color: #ff9b3d;
   }
 
 html, body {
     text-align: center;
-    font-size: 24px;
     background-color: var(--bg-color-two);
+    color: var(--font-color);
+}
+
+h3 {
+    font-family: 'Explora', cursive;
+    font-size: 60px;
+    font-weight: 900;
+    background-color: var(--bg-color-two);
+}
+
+p {
+    font-family: 'Explora', cursive;
+    font-size: 46px;
+    font-weight: 900;
+    background-color: var(--bg-color-two);  
+}
+
+li {
+    font-size: 26px;
+    font-weight: 900; 
+}
+
+.total {
+    font-size: 26px;
+    font-weight: 900; 
 }
 
 button {
@@ -22,6 +47,9 @@ button {
     margin: 15px;
     transition-duration: 0.4s;
     border: 2px solid var(--bg-color-two);
+    font-family: 'Modak', cursive;
+    font-size: 24px;
+    color: var(--font-color);
 }
 
 button:hover {
@@ -35,6 +63,11 @@ button:hover {
     margin: 15px;
 
 }
+
+img {
+    pointer-events: none;
+}
+
 
 ul {
     list-style-type: none;

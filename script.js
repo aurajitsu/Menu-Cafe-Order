@@ -76,7 +76,7 @@ function printlist(){
 
 
 // create a new function to detect duplicates in the array, then count the duplicates
-document.getElementById("calculate").addEventListener("click", calcTotal);
+document.getElementById("calculate").addEventListener("click", drawTotal);
 
 //spits out example: Tea: 2, or there are two teas
 function countItems(){
@@ -98,25 +98,24 @@ function countItems(){
 //TOTAL BUTTON links to this function first; 
 //figures out duplicates, spit out amount of each price item
 //example: $2: 1, or one $2 item
-function calcTotal(){
-    let itemPriceTotals = {};
 
+function calcTotal(){
+    let totalAmount = 0;
     for (let index = 0; index < selectedItemsList.length; index++) {
         let itemPriceNum = selectedItemsList[index].price;
-        let totalAmount = itemPriceTotals * itemPriceNum;
-        if (itemPriceTotals[itemPriceNum]) {
-            itemPriceTotals[itemPriceNum] += 1;
-
-        } else {
-            itemPriceTotals[itemPriceNum] = 1;
-          
-        }
-        console.log(itemPriceTotals);
+        totalAmount += itemPriceNum;
         console.log(totalAmount);
       }
+      return totalAmount;
 }
-//TO:DO for error NaN from the item price totals, make a
-//for each function and cast as an int on order for the multiplication to work
+
+function drawTotal(){
+    let cal = calcTotal();
+    document.getElementById('totalPrice').innerHTML = "$"+ cal + "<br>";
+    //alert(cal);
+
+}
+
 
 
 //function to delete an item from the list
