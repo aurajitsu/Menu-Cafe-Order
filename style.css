@@ -12,6 +12,23 @@ html, body {
     color: var(--font-color);
 }
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 80%;
+    justify-content: center;
+  }
+
+.flex-inner-container {
+    display: flex;
+  }
+
+h2 {
+    font-family: 'Explora', cursive;
+    font-size: 80px;
+    font-weight: 900;
+    background-color: var(--bg-color-two);
+}
 h3 {
     font-family: 'Explora', cursive;
     font-size: 60px;
@@ -36,7 +53,7 @@ li {
     font-weight: 900; 
 }
 
-button {
+.menuItem  {
     width: 200px;
     height: 200px;
     text-align: center;
@@ -47,14 +64,39 @@ button {
     margin: 15px;
     transition-duration: 0.4s;
     border: 2px solid var(--bg-color-two);
-    font-family: 'Modak', cursive;
-    font-size: 24px;
-    color: var(--font-color);
 }
 
-button:hover {
+.menuItem:hover {
     width: 220px;
     height: 220px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: var(--hover-color);
+    margin: 15px;
+
+}
+
+.button {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    margin: 15px;
+    transition-duration: 0.4s;
+    border: 2px solid var(--bg-color-two);
+    font-family: 'Modak', cursive;
+    font-size: 24px;
+    color: var(--font-color); 
+}
+
+.button:hover {
+    width: 220px;
+    height: 120px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

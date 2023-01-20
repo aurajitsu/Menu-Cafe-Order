@@ -13,38 +13,44 @@
 
 <body>
   <header class="">
-  <h3>Cafe</h3>
-     <p>Menu</p>  
+  <h2>Amelia's Cafe</h2>
+     <h3>Menu</h3>  
   </header>
 
   <!-- flebox -->
-  <div id="ItemsDiv">
+  <div class="flex-container">
+  <div id="ItemsDiv"  style="flex-basis: 900px">
   <button id="cake" class="menuItem" value="1" title="cake" ><img src="img/cake.png" alt="cake"></button>
   <button id="button" class="menuItem" value="2" title="coffee"><img src="img/coffee.png" alt="coffee"></button>
   <button id="tea" class="menuItem" value="3" title="tea"><img src="img/tea.png" alt="tea"></button>
   <button id="strawberry" class="menuItem" value="4" title="strawberry"><img src="img/berry1.png" alt="berry"></button>
-    </div>
+  <!-- new btns- replace values/images/names -->
+  <button id="tea" class="menuItem" value="3" title="tea"><img src="img/tea.png" alt="tea"></button>
+  <button id="tea" class="menuItem" value="3" title="tea"><img src="img/tea.png" alt="tea"></button>
+
+  </div>
   <br>
   
-<div>
-
+<div  style="flex-basis: 600px">
     <ul id="list" class="menulist">
         <li><p>Your Order</p></li>
         <!-- have items list here as buttons are clicked onClick="addTolist()"-->
     </ul>
 </div>
 
+<div class="flex-inner-container">
 <div class="total">
-  <button id="calculate" class="w3-circle w3-yellow" value="calculate" title="total">TOTAL</button>
+  <button id="calculate" class="button" value="calculate" title="total">TOTAL</button>
    <div id="totalPrice"> </div>
 </div>
 
 <div class="reset">
-  <button id="reset" class="w3-circle w3-yellow" value="resetOrder" title="reset">NEW ORDER</button>
+  <button id="reset" class="button" value="resetOrder" title="reset">NEW ORDER</button>
    <div id="resetOrder"> </div>
 </div>
+</div>
     
-
+</div>
   <script src="script.js"></script> 
 </body>
 
