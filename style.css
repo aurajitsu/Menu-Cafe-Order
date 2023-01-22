@@ -1,5 +1,6 @@
 :root {
    --font-color: rgb(255, 125, 212);
+   --font-color2: rgb(204, 0, 136);
    --bg-color: #fff170;
    --bg-color-two: #fff9d9;
    --bg-color-three: #e67cf0;
@@ -15,13 +16,19 @@ html, body {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    flex: 80%;
+    flex: 2;
     justify-content: center;
   }
 
 .flex-inner-container {
     display: flex;
   }
+
+.flex-order-container{
+    display: flex;
+    flex-direction: column;
+  }
+
 
 h2 {
     font-family: 'Explora', cursive;
@@ -49,7 +56,7 @@ li {
 }
 
 .total {
-    font-size: 26px;
+    font-size: 36px;
     font-weight: 900; 
 }
 
@@ -67,8 +74,8 @@ li {
 }
 
 .menuItem:hover {
-    width: 220px;
-    height: 220px;
+    width: 210px;
+    height: 210px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -80,7 +87,7 @@ li {
 
 .button {
     width: 200px;
-    height: 100px;
+    height: 90px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -91,12 +98,12 @@ li {
     border: 2px solid var(--bg-color-two);
     font-family: 'Modak', cursive;
     font-size: 24px;
-    color: var(--font-color); 
+    color: var(--font-color2); 
 }
 
 .button:hover {
     width: 220px;
-    height: 120px;
+    height: 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -113,4 +120,22 @@ img {
 
 ul {
     list-style-type: none;
+}
+
+.removeButton {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    margin: 5px;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--font-color2); 
+    border: none;
+}
+
+span {
+    display: inline-block;
 }
