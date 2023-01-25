@@ -183,10 +183,14 @@ function drawTotal(){
 }
 
 function newOrder(){
-    let reset = selectedItemsList.splice(0,selectedItemsList.length);
-    document.getElementById('totalPrice').innerHTML = reset + "<br>";
+    selectedItemsList= [];
+    drawFromArray();
 }
 
+function drawFromArray(){
+    document.getElementById('list').innerHTML = "" + "<br>";
+    document.getElementById('totalPrice').innerHTML = ""+ "<br>";
+}
 
 //function to delete an item from the list
 

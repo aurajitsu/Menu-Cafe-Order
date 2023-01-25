@@ -15,10 +15,11 @@
   <header class="">
   <h2>Amelia's Cafe</h2>  
   </header>
-  <!-- flebox -->
+  <!-- flebox parent -->
   <div class="flex-container">
   <div id="ItemsDiv"  style="flex-basis: 900px">
     <h3>Menu</h3>
+    <div class="lace pattern">
   <button id="cake" class="menuItem" value="1" title="cake" ><img src="img/cake.png" alt="cake"></button>
   <button id="button" class="menuItem" value="2" title="coffee"><img src="img/coffee.png" alt="coffee"></button>
   <button id="tea" class="menuItem" value="3" title="tea"><img src="img/tea.png" alt="tea"></button>
@@ -30,10 +31,12 @@
   <button id="burgercombo" class="menuItem" value="9" title="burger combo"><img src="img/burgercombo.png" alt="burgercombo"></button>
   <!--add new btns- replace values/images/names -->
   </div>
+</div>
   <br>
   
 <div id="orderItems" style="flex-basis: 600px">
   <h3>Your Order</h3>
+  <!--child -->
   <div class="flex-order-container">
     <ul id="list" class="menulist">
         <!-- have items list here as buttons are clicked: onClick="addTolist()"-->
@@ -41,8 +44,12 @@
     <div id="totalPrice" class="total"> </div>
   </div>
 </div>
+</div>
 
-<div class="flex-inner-container">
+<!--parent 2 -->
+<div class="flex-second-container">
+
+<!--child-->
 <div class="total">
   <button id="calculate" class="button" value="calculate" title="total">TOTAL</button>
 </div>
@@ -51,9 +58,10 @@
   <button id="reset" class="button" value="reset" title="reset">NEW ORDER</button>
    <div id="resetOrder"> </div>
 </div>
+
 </div>
     
-</div>
+
   <script src="script.js"></script> 
 </body>
 

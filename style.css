@@ -1,10 +1,11 @@
 :root {
    --font-color: rgb(255, 125, 212);
    --font-color2: rgb(204, 0, 136);
-   --bg-color: #fff170;
+   --bg-color: #fff27b;
    --bg-color-two: #fff9d9;
-   --bg-color-three: #e67cf0;
-   --hover-color: #ff9b3d;
+   --bg-color-three: #f8a6a6;
+   --bg-color-four: #fdff8f;
+   --hover-color: #fc8da9;
   }
 
 html, body {
@@ -13,20 +14,34 @@ html, body {
     color: var(--font-color);
 }
 
+header {
+    margin: 0%;
+}
+
+/* parent */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
     flex: 2;
-    justify-content: center;
+    justify-content: flex-start;
+    
   }
 
-.flex-inner-container {
-    display: flex;
-  }
-
+   /* child */
 .flex-order-container{
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    height: 680px;
+    flex-grow: 2;
+  }
+
+  /*parent 2*/
+.flex-second-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
 
@@ -34,6 +49,7 @@ h2 {
     font-family: 'Explora', cursive;
     font-size: 80px;
     font-weight: 900;
+    margin: 0px;
     background-color: var(--bg-color-two);
 }
 h3 {
@@ -41,6 +57,7 @@ h3 {
     font-size: 60px;
     font-weight: 900;
     background-color: var(--bg-color-two);
+    margin: 0px;
 }
 
 p {
@@ -58,6 +75,12 @@ li {
 .total {
     font-size: 36px;
     font-weight: 900; 
+}
+
+#totalPrice {
+    margin-top: auto;
+    background-color: var(--bg-color-four);
+    border-radius: 10px;
 }
 
 .menuItem  {
@@ -139,3 +162,34 @@ ul {
 span {
     display: inline-block;
 }
+
+.lace {
+	height: 100px;
+	background: var(--bg-color-two);
+	margin-bottom: 15px;
+}
+
+.pattern {
+	background-image:
+                radial-gradient(circle at 15px 0, var(--font-color) 14px, var(--font-color2) 15px, var(--bg-color-three) 20px),
+                radial-gradient(circle at 15px 0, var(--bg-color-two) 15px, var(--font-color2) 15px, var(--bg-color-two) 20px),
+                radial-gradient(circle at 15px 0, var(--font-color) 4px, var(--font-color2) 5px, var(--font-color) 10px),
+                radial-gradient(circle at 5px 5px, var(--bg-color-two) 1px, var(--font-color2) 2px, var(--bg-color-two) 5px);
+        background-repeat: repeat-x;
+        background-position: 0 0, 15px 6px, 0 0, 25px 9px;
+        background-size: 30px 21px, 30px 21px, 30px 21px, 30px 20px;
+}
+
+@media (max-width: 1024px) {
+    header {
+      flex-wrap: wrap;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    header {
+      flex-wrap: wrap;
+      margin: 0;
+    }
+  }
