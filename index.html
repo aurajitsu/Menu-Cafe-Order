@@ -14,12 +14,13 @@
 <body>
   <header class="">
   <h2>Amelia's Cafe</h2>  
+  <div class="lace pattern">
+  </div>
   </header>
   <!-- flebox parent -->
   <div class="flex-container">
   <div id="ItemsDiv"  style="flex-basis: 900px">
     <h3>Menu</h3>
-    <div class="lace pattern">
   <button id="cake" class="menuItem" value="1" title="cake" ><img src="img/cake.png" alt="cake"></button>
   <button id="button" class="menuItem" value="2" title="coffee"><img src="img/coffee.png" alt="coffee"></button>
   <button id="tea" class="menuItem" value="3" title="tea"><img src="img/tea.png" alt="tea"></button>
@@ -30,10 +31,19 @@
   <button id="milk" class="menuItem" value="8" title="milk"><img src="img/milk.png" alt="milk"></button>
   <button id="burgercombo" class="menuItem" value="9" title="burger combo"><img src="img/burgercombo.png" alt="burgercombo"></button>
   <!--add new btns- replace values/images/names -->
-  </div>
 </div>
-  <br>
-  
+
+<!-- The Modal -->
+<div id="popupModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <div id="popupName">example</div>
+  </div>
+
+</div>
+
 <div id="orderItems" style="flex-basis: 600px">
   <h3>Your Order</h3>
   <!--child -->
